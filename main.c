@@ -15,20 +15,20 @@ int main(){
 	bool b = true;
 	char control = 0;
 
-	for(i = 0;i < I;i++){
+	for(i = 0;i < I;i++){ // fill map with 0
 		for(j = 0;j < J;j++){
 			map[i][j] = 0;
 		}
 	}
-while(1)
+while(1) 
     {
-        Sleep(T);
-        system("cls");
+        Sleep(T); // wait T milliseconds
+        system("cls"); // clear terminal 
         if (kbhit())
         {
-            control = getch();
+            control = getch(); //get keyboard input
             
-            switch ((int)control){
+            switch ((int)control){ 
                 case 122: // Z key
                    if(y > 0){
                    		y--;
@@ -59,7 +59,7 @@ while(1)
         }
         map[x][y] = 1;
 
-        for(i = 0;i < I;i++){
+        for(i = 0;i < I;i++){ // print game
 			for(j = 0;j < J;j++){
 				if(map[j][i] == 1){
 				 	printf("[]");
